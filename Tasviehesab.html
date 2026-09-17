@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسویه حساب</title>
+<link rel="stylesheet" href="Tasviehesab.css">
+</head>
+<body>
+<div class="checkout">
+
+    <div class="customer-box">
+        <h2>تسویه حساب</h2>
+    <button class="btn" onclick="closeProduct()">
+        ← برگشت  
+    </button>
+        <div class="input-row">
+            <div class="input-box">
+                <label>نام و نام خانوادگی</label>
+                <input type="text" id="name" placeholder="نام خود را وارد کنید">
+            </div>
+
+            <div class="input-box">
+                <label>شماره موبایل</label>
+                <input type="tel" id="phone" placeholder="09123456789">
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>آدرس</label>
+            <textarea id="address" placeholder="آدرس کامل خود را وارد کنید"></textarea>
+        </div>
+
+        <div class="input-row">
+            <div class="input-box">
+                <label>استان</label>
+                <select id="province">
+                    <option value="">انتخاب استان</option>
+                    <option>تهران</option>
+                    <option>اصفهان</option>
+                    <option>فارس</option>
+                    <option>خراسان رضوی</option>
+                    <option>آذربایجان شرقی</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>کد پستی</label>
+                <input type="text" id="postal" placeholder="کد پستی">
+            </div>
+        </div>
+
+        <h3>روش پرداخت</h3>
+
+        <div class="payment-methods">
+
+            <label class="payment active">
+                <input type="radio" name="payment" value="online" checked>
+                <div>
+                    <strong>پرداخت آنلاین</strong>
+                    <span>پرداخت از طریق درگاه بانکی</span>
+                </div>
+            </label>
+
+            <label class="payment">
+                <input type="radio" name="payment" value="cash">
+                <div>
+                    <strong>پرداخت در محل</strong>
+                    <span>پرداخت هنگام دریافت سفارش</span>
+                </div>
+            </label>
+
+        </div>
+
+        <button id="submitBtn">ثبت سفارش</button>
+
+    </div>
+<script src="tasviehesab.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,143 @@
+       * {
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0a1628;
+            background-image: 
+                radial-gradient(ellipse at center, #0d2137 0%, #0a1628 70%);
+            overflow: hidden;
+            font-family: 'Amiri', serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .text-wrapper {
+            position: relative;
+            display: inline-block;
+            padding: 40px 60px;
+        }
+
+        .typed-text {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #d4a843;
+            text-shadow: 
+                0 0 10px rgba(212, 168, 67, 0.5),
+                0 0 20px rgba(212, 168, 67, 0.3),
+                0 0 40px rgba(212, 168, 67, 0.2),
+                0 0 80px rgba(212, 168, 67, 0.1);
+            letter-spacing: 2px;
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 4rem;
+            background: #d4a843;
+            margin-right: 5px;
+            vertical-align: middle;
+            animation: blink 0.7s infinite;
+            box-shadow: 0 0 10px rgba(212, 168, 67, 0.8);
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: letterAppear 0.3s forwards;
+        }
+
+        @keyframes letterAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .particles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #d4a843;
+            border-radius: 50%;
+            opacity: 0;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 2px;
+            background: rgba(212, 168, 67, 0.2);
+            margin: 30px auto 0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #d4a843, #f0d078, #d4a843);
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 10px rgba(212, 168, 67, 0.5);
+        }
+
+        .subtitle {
+            color: rgba(212, 168, 67, 0.4);
+            font-size: 1rem;
+            margin-top: 15px;
+            letter-spacing: 5px;
+            font-family: 'Amiri', serif;
+        }
+
+        .glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 300px;
+            background: radial-gradient(ellipse, rgba(212, 168, 67, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }

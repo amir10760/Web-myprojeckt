@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ورود به حساب</title>
+</head>
+<link rel="stylesheet" href="Login.css">
+<body>
+<div class="login-box">
+    <div class="role-section" id="roleSection">
+
+        <h1>ورود به حساب</h1>
+        <p>نوع حساب خود را انتخاب کنید</p>
+
+        <div class="roles">
+
+            <button class="role" onclick="showLogin('admin')">
+                <div class="icon">👨‍💼</div>
+                <span>مدیر</span>
+            </button>
+
+            <button class="role" onclick="showLogin('customer')">
+                <div class="icon">🛍️</div>
+                <span>مشتری</span>
+            </button>
+
+        </div>
+
+    </div>
+    <div class="form-section" id="adminForm">
+
+<h2>ورود مدیر 👨‍💼</h2>
+        <div class="subtitle">
+            وارد حساب مدیریت شوید
+        </div>
+
+        <div class="input-box">
+            <label>نام کاربری</label>
+            <input type="text" id="adminUser" placeholder="نام کاربری مدیر">
+        </div>
+
+        <div class="input-box">
+            <label>رمز عبور</label>
+            <input type="password" id="adminPass" placeholder="رمز عبور">
+        </div>
+
+        <button class="login-btn" onclick="login('admin')">
+            ورود به حساب
+        </button>
+
+        <button class="back-btn" onclick="backToRoles()">
+            ← انتخاب نوع حساب
+        </button>
+
+    </div>
+
+    <div class="form-section" id="customerForm">
+
+        <h2>ورود مشتری 🛍️</h2>
+        <div class="subtitle">
+            وارد حساب کاربری خود شوید
+        </div>
+
+        <div class="input-box">
+            <label>نام کاربری</label>
+            <input type="text" id="customerUser" placeholder="نام کاربری">
+        </div>
+
+        <div class="input-box">
+            <label>رمز عبور</label>
+            <input type="password" id="customerPass" placeholder="رمز عبور">
+        </div>
+
+        <button class="login-btn" onclick="login('customer')">
+            ورود به حساب
+        </button>
+
+        <button class="back-btn" onclick="backToRoles()">
+            ← انتخاب نوع حساب
+        </button>
+
+    </div>
+
+</div>
+
+<script src="Login.js"></script>
+</body>
+</html>
